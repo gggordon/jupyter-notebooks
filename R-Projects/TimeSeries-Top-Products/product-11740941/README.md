@@ -503,7 +503,7 @@ paste("Train Size: ",length(prod1.data.rawts.train),
 
 
 ```R
-prod1.hw=HoltWinters(prod1.data.rawts.train,alpha=0.9,beta=0,gamma=0.9)
+prod1.hw=HoltWinters(prod1.data.rawts.train)
 prod1.hw
 ```
 
@@ -513,37 +513,37 @@ prod1.hw
     Holt-Winters exponential smoothing with trend and additive seasonal component.
     
     Call:
-    HoltWinters(x = prod1.data.rawts.train, alpha = 0.9, beta = 0,     gamma = 0.9)
+    HoltWinters(x = prod1.data.rawts.train)
     
     Smoothing parameters:
-     alpha: 0.9
-     beta : 0
-     gamma: 0.9
+     alpha: 0.004669677597
+     beta : 1
+     gamma: 0.1569846965
     
     Coefficients:
                   [,1]
-    a  1132.8523462799
-    b    -9.7295918367
-    s1  105.3627048042
-    s2  119.5520360506
-    s3 -141.3401467373
-    s4   28.4868919009
-    s5    0.7853619252
-    s6   20.6399188323
-    s7   55.6806107092
+    a  1214.7957691623
+    b    -1.9378029018
+    s1  125.3338576902
+    s2  221.1990803541
+    s3  -50.1813736446
+    s4   40.1358787030
+    s5  -38.6738192266
+    s6  -37.8285911941
+    s7    0.7352602356
 
 
 
 
 ```R
-prod1.hw.rms=sqrt(sum((prod1.data.rawts.train-prod1.hw$fit[,1])^2))/length(prod1.data.rawts.train)
+prod1.hw.rms=sqrt(sum((prod1.data.rawts.train-prod1.hw$fit[,1])^2)/length(prod1.data.rawts.train))
 paste('Root Mean Square Error: ',prod1.hw.rms)
 ```
 
 
 
 
-'Root Mean Square Error:  32.9747576969196'
+'Root Mean Square Error:  320.793250049083'
 
 
 
@@ -563,7 +563,7 @@ paste('Mean Absolute % Error for Holt Winters : ',prod1.hw.error,'%')
 
 
 
-'Mean Absolute % Error for Holt Winters :  23.5347833203166 %'
+'Mean Absolute % Error for Holt Winters :  13.6118414544339 %'
 
 
 
@@ -625,7 +625,8 @@ prod1.arima.fit
 
 ```R
 plot(prod1.data.rawts,col="blue",
-     main="Arima(1,0,2) 14 Day Prediction(red) vs Actual 14 Day(blue)",
+     main="Arima(2,1,1) 14 Day Prediction(red) vs Actual 14 Day(blue)",
+     sub="Arima (2,1,1) (0,1,1)[7]",
      ylab="Item Purchases")
 prod1.arima.pred= predict(prod1.arima,n.ahead=14)$pred
 prod1.arima.pred

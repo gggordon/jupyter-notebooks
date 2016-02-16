@@ -425,7 +425,7 @@ paste("Train Size: ",length(prod1.data.rawts.train),
 
 
 ```R
-prod1.hw=HoltWinters(prod1.data.rawts.train,alpha=0.9,beta=0,gamma=0.9)
+prod1.hw=HoltWinters(prod1.data.rawts.train)
 prod1.hw
 ```
 
@@ -435,37 +435,37 @@ prod1.hw
     Holt-Winters exponential smoothing with trend and additive seasonal component.
     
     Call:
-    HoltWinters(x = prod1.data.rawts.train, alpha = 0.9, beta = 0,     gamma = 0.9)
+    HoltWinters(x = prod1.data.rawts.train)
     
     Smoothing parameters:
-     alpha: 0.9
-     beta : 0
-     gamma: 0.9
+     alpha: 0.4511556792
+     beta : 0.005567509725
+     gamma: 0.4057182769
     
     Coefficients:
                 [,1]
-    a  293.395548981
-    b   -9.576530612
-    s1  57.511953152
-    s2  41.373416356
-    s3  -1.379706177
-    s4 -17.045659023
-    s5  35.644975032
-    s6  39.690984742
-    s7  49.531856122
+    a  281.256976413
+    b   -3.290797028
+    s1  71.825591603
+    s2  84.834814472
+    s3  49.179524889
+    s4  58.981298456
+    s5 114.249999112
+    s6 117.202617674
+    s7  60.966179991
 
 
 
 
 ```R
-prod1.hw.rms=sqrt(sum((prod1.data.rawts.train-prod1.hw$fit[,1])^2))/length(prod1.data.rawts.train)
+prod1.hw.rms=sqrt(sum((prod1.data.rawts.train-prod1.hw$fit[,1])^2)/length(prod1.data.rawts.train))
 paste('Root Mean Square Error: ',prod1.hw.rms)
 ```
 
 
 
 
-'Root Mean Square Error:  10.6079147341412'
+'Root Mean Square Error:  142.897872959523'
 
 
 
@@ -485,7 +485,7 @@ paste('Mean Absolute % Error for Holt Winters : ',prod1.hw.error,'%')
 
 
 
-'Mean Absolute % Error for Holt Winters :  35.7084973382145 %'
+'Mean Absolute % Error for Holt Winters :  15.4700729958441 %'
 
 
 
@@ -553,7 +553,8 @@ prod1.arima.fit
 
 ```R
 plot(prod1.data.rawts,col="blue",
-     main="Arima(1,0,2) 14 Day Prediction(red) vs Actual 14 Day(blue)",
+     main="Arima(3,1,1) 14 Day Prediction(red) vs Actual 14 Day(blue)",
+     sub="Arima (3,1,1)(2,0,1)[7]",
      ylab="Item Purchases")
 prod1.arima.pred= predict(prod1.arima,n.ahead=14)$pred
 prod1.arima.pred
