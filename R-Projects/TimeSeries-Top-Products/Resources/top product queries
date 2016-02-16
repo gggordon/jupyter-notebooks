@@ -1,0 +1,8 @@
+1,11740941
+3,11741274
+5,11743201
+
+SELECT SUM(`ITEM_QTY`) as quantity_sold  FROM `sales` 
+where `ITEM_SK`= '11740941'
+GROUP BY `date`
+order by `date` asc
