@@ -3,7 +3,7 @@
 ### Author G. Gordon
 February 15, 2016
 
-Part 3 - Product 11741274
+Part 2 - Product 11741274
 
 ## DATA ANALYSIS
 
@@ -582,7 +582,7 @@ paste('Mean Absolute % Error for Holt Winters : ',prod1.arima.error,'%')
 
 
 
-'Mean Absolute % Error for Holt Winters :  23.2317272980919 %'
+'Mean Absolute % Error for Arima (3,1,1) :  23.2317272980919 %'
 
 
 
@@ -644,7 +644,7 @@ paste('Mean Absolute % Error for Holt Winters : ',prod1.arima.error,'%')
 
 
 
-'Mean Absolute % Error for Holt Winters :  23.2317272980919 %'
+'Mean Absolute % Error for Arima (7,0,0) :  23.2317272980919 %'
 
 
 
