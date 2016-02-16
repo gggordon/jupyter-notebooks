@@ -469,14 +469,14 @@ prod1.hw
 
 
 ```R
-prod1.hw.rms=sqrt(sum((prod1.data.rawts.train-prod1.hw$fit[,1])^2))/length(prod1.data.rawts.train)
+prod1.hw.rms=sqrt(sum((prod1.data.rawts.train-prod1.hw$fit[,1])^2)/length(prod1.data.rawts.train))
 paste('Root Mean Square Error: ',prod1.hw.rms)
 ```
 
 
 
 
-'Root Mean Square Error:  10.5216229832783'
+'Root Mean Square Error:  161.978326938925'
 
 
 
