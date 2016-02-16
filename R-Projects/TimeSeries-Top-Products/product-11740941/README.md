@@ -635,7 +635,7 @@ testv = as.vector(prod1.data.rawts.test)
 
 predv = as.vector(prod1.arima.pred)
 prod1.arima.error=mean(100*abs(testv - predv)/testv)
-paste('Mean Absolute % Error for Holt Winters : ',prod1.arima.error,'%')
+paste('Mean Absolute % Error for Arima(2,1,1) : ',prod1.arima.error,'%')
 ```
 
 
@@ -654,7 +654,7 @@ paste('Mean Absolute % Error for Holt Winters : ',prod1.arima.error,'%')
 
 
 
-'Mean Absolute % Error for Holt Winters :  8.00143654701691 %'
+'Mean Absolute % Error for Arima(2,1,1) :  8.00143654701691 %'
 
 
 
@@ -678,7 +678,7 @@ testv = as.vector(prod1.data.rawts.test)
 
 predv = as.vector(prod1.arima.pred)
 prod1.arima.error=mean(100*abs(testv - predv)/testv)
-paste('Mean Absolute % Error for Holt Winters : ',prod1.arima.error,'%')
+paste('Mean Absolute % Error for Arima(7,0,0) : ',prod1.arima.error,'%')
 ```
 
 
@@ -716,7 +716,7 @@ paste('Mean Absolute % Error for Holt Winters : ',prod1.arima.error,'%')
 
 
 
-'Mean Absolute % Error for Holt Winters :  8.00143654701691 %'
+'Mean Absolute % Error for Arima(7,0,0) :  8.00143654701691 %'
 
 
 
