@@ -1,7 +1,8 @@
 
 # Product Mining Appendix
 
-The following are included for all seven (7) groups
+The following are included for all seven (7) groups:
+
 1. Top and Least Performing Products
 2. Distribution of taxable products across groups
 3. Distribution of products across departments
