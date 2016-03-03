@@ -1,7 +1,11 @@
 
-## Data Mining - Assignment 2
-### R Data Preparation and Clustering
- > January 28,2015
+# Product Mining Appendix
+
+The following are included for all seven (7) groups
+1. Top and Least Performing Products
+2. Distribution of taxable products across groups
+3. Distribution of products across departments
+4. Distribution of products across categories
 
 
 <h2>Top and Least Performing Products Within Groups</h2>
